@@ -26,7 +26,7 @@ git clone https://github.com/yourusername/portfolio.git
 ```
 
 ## 📬 Contact
-- 📧 Email: your-email@example.com
+- 📧 Email: siddharthkumar1082@gmail.com
 - 💼 LinkedIn: https://linkedin.com/in/your-profile
 
 ---
