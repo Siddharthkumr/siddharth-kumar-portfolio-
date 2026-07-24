@@ -137,3 +137,12 @@ if (hireBtn) {
     console.log("Thanks for visiting my portfolio");
   });
 }
+const menuBtn = document.querySelector("#menu-btn");
+const navMenu = document.querySelector("nav ul");
+
+
+menuBtn.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+});
