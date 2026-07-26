@@ -1,7 +1,3 @@
-// ==========================
-// MOBILE MENU
-// ==========================
-
 const menuBtn = document.querySelector(".menu");
 const navLinks = document.querySelector("nav ul");
 
@@ -10,10 +6,6 @@ if (menuBtn) {
     navLinks.classList.toggle("active");
   });
 }
-
-// ==========================
-// NAVBAR SHADOW ON SCROLL
-// ==========================
 
 const header = document.querySelector("header");
 
@@ -24,10 +16,6 @@ window.addEventListener("scroll", () => {
     header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.08)";
   }
 });
-
-// ==========================
-// TYPING EFFECT
-// ==========================
 
 const text = "Frontend Developer";
 
@@ -50,11 +38,6 @@ if (document.querySelector(".hero h2")) {
 
   typing();
 }
-
-// ==========================
-// AI CHATBOT
-// ==========================
-
 function openAI() {
   let box = document.getElementById("aiBox");
 
@@ -66,7 +49,7 @@ function openAI() {
 }
 
 function sendAI() {
-  let input = document.getElementById("userInput");
+  let input = document.getElementById("");
 
   let chat = document.getElementById("chat");
 
@@ -125,10 +108,6 @@ function sendAI() {
 
   chat.scrollTop = chat.scrollHeight;
 }
-
-// ==========================
-// BUTTON CLICK MESSAGE
-// ==========================
 
 const hireBtn = document.querySelector(".btn");
 
