@@ -1,118 +1,201 @@
+// ===========================
+// MOBILE MENU
+// ===========================
+
 const menuBtn = document.querySelector(".menu");
 const navLinks = document.querySelector("nav ul");
 
-if (menuBtn) {
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Close menu after clicking a link
+document.querySelectorAll("nav ul li a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
   });
-}
+});
+
+
+// ===========================
+// HEADER SHADOW
+// ===========================
 
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
+
   if (window.scrollY > 50) {
-    header.style.boxShadow = "0 10px 25px rgba(0,0,0,0.15)";
+    header.style.boxShadow = "0 10px 25px rgba(0,0,0,.15)";
   } else {
-    header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.08)";
+    header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
   }
+
 });
 
-const text = "Frontend Developer";
+
+// ===========================
+// TYPING EFFECT
+// ===========================
+
+const typingElement = document.querySelector(".typing-text");
+
+const text = "🚀 Frontend Developer";
 
 let index = 0;
 
 function typing() {
-  const heading = document.querySelector(".hero h2");
 
   if (index < text.length) {
-    heading.innerHTML += text.charAt(index);
+
+    typingElement.innerHTML += text.charAt(index);
 
     index++;
 
     setTimeout(typing, 100);
+
   }
+
 }
 
-if (document.querySelector(".hero h2")) {
-  document.querySelector(".hero h2").innerHTML = "";
+typingElement.innerHTML = "";
 
-  typing();
-}
+typing();
+
+
+// ===========================
+// AI CHATBOT OPEN / CLOSE
+// ===========================
+
 function openAI() {
-  let box = document.getElementById("aiBox");
+
+  const box = document.getElementById("aiBox");
 
   if (box.style.display === "block") {
+
     box.style.display = "none";
+
   } else {
+
     box.style.display = "block";
+
   }
+
 }
 
+
+// ===========================
+// AI CHATBOT
+// ===========================
+
 function sendAI() {
-  let input = document.getElementById("");
 
-  let chat = document.getElementById("chat");
+  const input = document.getElementById("userInput");
 
-  let question = input.value.toLowerCase();
+  const chat = document.getElementById("chat");
 
-  if (question.trim() == "") {
-    return;
-  }
+  const question = input.value.trim();
 
-  chat.innerHTML += `
-<p><b>You:</b> ${question}</p>
-`;
+  if (question === "") return;
+
+  chat.innerHTML += `<p><b>You:</b> ${question}</p>`;
+
+  const q = question.toLowerCase();
 
   let reply = "";
 
-  if (question.includes("hi") || question.includes("hello")) {
-    reply =
-      "Hello 👋 Welcome to Siddharth's portfolio. Ask me about my skills, projects, experience, education or certificates.";
-  } else if (question.includes("name")) {
-    reply =
-      "My name is Siddharth Kumar. I am a Frontend Developer and MCA graduate.";
-  } else if (question.includes("skill")) {
-    reply =
-      "My skills are HTML5, CSS3, JavaScript, React JS, Bootstrap, Git and GitHub.";
-  } else if (question.includes("project")) {
-    reply =
-      "My projects include YouTube Clone, E-Commerce Website, Calculator App and Recipe App.";
-  } else if (question.includes("experience")) {
-    reply =
-      "I worked as Frontend Developer Intern at Supple Soft Pvt Limited, Gurgaon from February 2025 to May 2025.";
-  } else if (question.includes("education") || question.includes("mca")) {
-    reply =
-      "I completed Master of Computer Applications (MCA) from NIET Greater Noida in 2026.";
-  } else if (question.includes("certificate")) {
-    reply =
-      "I have completed Frontend Developer Internship Certificate from Supple Soft Pvt Limited and certificates from Infosys Springboard.";
-  } else if (question.includes("resume")) {
-    reply =
-      "You can download my resume by clicking the Download Resume button on my portfolio.";
-  } else if (
-    question.includes("contact") ||
-    question.includes("email") ||
-    question.includes("phone")
-  ) {
-    reply = "Email: siddharthkumar1082@gmail.com | Phone: 7766052347";
-  } else {
-    reply =
-      "I can tell you about Siddharth's skills, projects, education, experience, certificates and contact details.";
+  if (q.includes("hi") || q.includes("hello")) {
+
+    reply = "Hello 👋 Welcome to Siddharth's Portfolio.";
+
   }
 
-  chat.innerHTML += `
-<p><b>Siddharth AI:</b> ${reply}</p>
-`;
+  else if (q.includes("name")) {
+
+    reply = "My name is Siddharth Kumar.";
+
+  }
+
+  else if (q.includes("skill")) {
+
+    reply = "HTML, CSS, JavaScript, React JS, Bootstrap, Tailwind CSS, Git and GitHub.";
+
+  }
+
+  else if (q.includes("project")) {
+
+    reply = "My projects include YouTube Clone, Movie UI and Calculator App.";
+
+  }
+
+  else if (q.includes("experience")) {
+
+    reply = "Frontend Developer Intern at Supple Soft Pvt. Ltd., Gurgaon (Feb 2025 - May 2025).";
+
+  }
+
+  else if (q.includes("education") || q.includes("mca")) {
+
+    reply = "MCA from NIET Greater Noida (2026).";
+
+  }
+
+  else if (q.includes("resume")) {
+
+    reply = "Please click the Download Resume button on my portfolio.";
+
+  }
+
+  else if (q.includes("contact") || q.includes("email")) {
+
+    reply = "Email: siddharthkumar1082@gmail.com";
+
+  }
+
+  else if (q.includes("phone")) {
+
+    reply = "Phone: +91 7766052347";
+
+  }
+
+  else {
+
+    reply = "Sorry, I don't understand. Please ask about Skills, Projects, Experience, Education or Contact.";
+
+  }
+
+  chat.innerHTML += `<p><b>Siddharth AI:</b> ${reply}</p>`;
 
   input.value = "";
 
   chat.scrollTop = chat.scrollHeight;
+
 }
+
+
+// ===========================
+// ENTER KEY SUPPORT
+// ===========================
+
+document.getElementById("userInput").addEventListener("keypress", function (e) {
+
+  if (e.key === "Enter") {
+
+    sendAI();
+
+  }
+
+});
+
+
+// ===========================
+// HIRE BUTTON
+// ===========================
 
 const hireBtn = document.querySelector(".btn");
 
-if (hireBtn) {
-  hireBtn.addEventListener("click", () => {
-    console.log("Thanks for visiting my portfolio");
-  });
-}
+hireBtn.addEventListener("click", () => {
+
+  console.log("Thanks for visiting my portfolio!");
+
+});
