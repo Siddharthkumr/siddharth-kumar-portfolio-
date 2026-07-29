@@ -1,180 +1,236 @@
+/* ==========================
+   BACKGROUND CANVAS ANIMATION
+========================== */
 
-const menuBtn = document.querySelector(".menu");
-const navLinks = document.querySelector("nav ul");
+const canvas = document.getElementById("bg-canvas");
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+const ctx = canvas.getContext("2d");
 
-document.querySelectorAll("nav ul li a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-  });
-});
+let W, H;
 
+let particles = [];
 
-const header = document.querySelector("header");
+let mouseX = -9999;
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.style.boxShadow = "0 10px 25px rgba(0,0,0,.15)";
-  } else {
-    header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
-  }
-});
+let mouseY = -9999;
 
+function resize() {
+  W = canvas.width = window.innerWidth;
 
-const typingElement = document.querySelector(".typing-text");
-
-const texts = ["💻 Frontend Developer.", "⚛️ React.js Developer"];
-
-let textIndex = 0;
-let charIndex = 0;
-
-function typeText() {
-  if (charIndex < texts[textIndex].length) {
-    typingElement.textContent += texts[textIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(typeText, 100);
-  } else {
-    setTimeout(() => {
-      typingElement.textContent = "";
-      charIndex = 0;
-      textIndex = (textIndex + 1) % texts.length;
-      typeText();
-    }, 1500);
-  }
+  H = canvas.height = window.innerHeight;
 }
 
-typeText();
+resize();
 
+window.addEventListener("resize", resize);
 
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
 
-function openAI() {
-  const box = document.getElementById("aiBox");
-
-  if (box.style.display === "block") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "block";
-  }
-}
-
-// ===========================
-// AI CHATBOT
-// ===========================
-
-function sendAI() {
-  const input = document.getElementById("userInput");
-
-  const chat = document.getElementById("chat");
-
-  const question = input.value.trim();
-
-  if (question === "") return;
-
-  chat.innerHTML += `<p><b>You:</b> ${question}</p>`;
-
-  const q = question.toLowerCase();
-
-  let reply = "";
-
-  if (q.includes("hi") || q.includes("hello")) {
-    reply = "Hello 👋 Welcome to Siddharth's Portfolio.";
-  } else if (q.includes("name")) {
-    reply = "My name is Siddharth Kumar.";
-  } else if (q.includes("skill")) {
-    reply =
-      "HTML, CSS, JavaScript, React JS, Bootstrap, Tailwind CSS, Git and GitHub.";
-  } else if (q.includes("project")) {
-    reply = "My projects include YouTube Clone, Movie UI and Calculator App.";
-  } else if (q.includes("experience")) {
-    reply =
-      "Frontend Developer Intern at Supple Soft Pvt. Ltd., Gurgaon (Feb 2025 - May 2025).";
-  } else if (q.includes("education") || q.includes("mca")) {
-    reply = "MCA from NIET Greater Noida (2026).";
-  } else if (q.includes("resume")) {
-    reply = "Please click the Download Resume button on my portfolio.";
-  } else if (q.includes("contact") || q.includes("email")) {
-    reply = "Email: siddharthkumar1082@gmail.com";
-  } else if (q.includes("phone")) {
-    reply = "Phone: +91 7766052347";
-  } else {
-    reply =
-      "Sorry, I don't understand. Please ask about Skills, Projects, Experience, Education or Contact.";
-  }
-
-  chat.innerHTML += `<p><b>Siddharth AI:</b> ${reply}</p>`;
-
-  input.value = "";
-
-  chat.scrollTop = chat.scrollHeight;
-}
-
-// ===========================
-// ENTER KEY SUPPORT
-// ===========================
-
-document.getElementById("userInput").addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
-    sendAI();
-  }
+  mouseY = e.clientY;
 });
 
-// ===========================
-// HIRE BUTTON
-// ===========================
+class Particle {
+  constructor() {
+    this.reset(true);
+  }
 
-const hireBtn = document.querySelector(".btn");
+  reset(init) {
+    this.x = Math.random() * W;
 
-hireBtn.addEventListener("click", () => {
-  console.log("Thanks for visiting my portfolio!");
-});
-const revealElements = document.querySelectorAll(".reveal");
+    this.y = init ? Math.random() * H : H + 10;
 
-window.addEventListener("scroll", () => {
-  revealElements.forEach((element) => {
-    const windowHeight = window.innerHeight;
-    const elementTop = element.getBoundingClientRect().top;
+    this.vx = (Math.random() - 0.5) * 0.3;
 
-    if (elementTop < windowHeight - 100) {
-      element.classList.add("active");
+    this.vy = -Math.random() * 0.35 - 0.1;
+
+    this.r = Math.random() * 1.5 + 0.4;
+
+    this.alpha = Math.random() * 0.5 + 0.1;
+
+    this.hue = Math.random() > 0.5 ? 250 : 330;
+  }
+
+  update() {
+    const dx = this.x - mouseX;
+
+    const dy = this.y - mouseY;
+
+    const dist = Math.sqrt(dx * dx + dy * dy);
+
+    if (dist < 120) {
+      this.vx += (dx / dist) * 0.03;
+
+      this.vy += (dy / dist) * 0.03;
     }
-  });
-});
 
-// const reveals = document.querySelectorAll(".reveal");
+    this.vx *= 0.99;
 
-// function revealOnScroll() {
+    this.vy *= 0.99;
 
-//     reveals.forEach((element) => {
+    this.x += this.vx;
 
-//         const windowHeight = window.innerHeight;
-//         const elementTop = element.getBoundingClientRect().top;
+    this.y += this.vy;
 
-//         if (elementTop < windowHeight - 100) {
-//             element.classList.add("active");
-//         }
-
-//     });
-
-// }
-
-// window.addEventListener("scroll", revealOnScroll);
-
-// revealOnScroll();const revealElements = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  revealElements.forEach((element) => {
-    const windowHeight = window.innerHeight;
-    const elementTop = element.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 100) {
-      element.classList.add("active");
+    if (this.y < -10 || this.x < -10 || this.x > W + 10) {
+      this.reset(false);
     }
-  });
+  }
+
+  draw() {
+    ctx.beginPath();
+
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+
+    ctx.fillStyle = `hsla(${this.hue},80%,70%,${this.alpha})`;
+
+    ctx.fill();
+  }
 }
 
-window.addEventListener("scroll", revealOnScroll);
+for (let i = 0; i < 120; i++) {
+  particles.push(new Particle());
+}
 
-revealOnScroll();
+function drawGrid() {
+  const spacing = 60;
+
+  for (let x = 0; x < W; x += spacing) {
+    for (let y = 0; y < H; y += spacing) {
+      const dx = x - mouseX;
+
+      const dy = y - mouseY;
+
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      const glow = Math.max(0, 1 - dist / 200);
+
+      ctx.fillStyle = `rgba(108,99,255,${0.1 + glow * 0.4})`;
+
+      ctx.beginPath();
+
+      ctx.arc(x, y, 0.7 + glow * 1.5, 0, Math.PI * 2);
+
+      ctx.fill();
+    }
+  }
+}
+
+/* ==========================
+      CANVAS ANIMATION
+========================== */
+
+function animate() {
+  ctx.clearRect(0, 0, W, H);
+
+  drawGrid();
+
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+
+      const dy = particles[i].y - particles[j].y;
+
+      const d = Math.sqrt(dx * dx + dy * dy);
+
+      if (d < 100) {
+        ctx.beginPath();
+
+        ctx.moveTo(particles[i].x, particles[i].y);
+
+        ctx.lineTo(particles[j].x, particles[j].y);
+
+        ctx.strokeStyle = `rgba(108,99,255,${0.12 * (1 - d / 100)})`;
+
+        ctx.lineWidth = 0.5;
+
+        ctx.stroke();
+      }
+    }
+  }
+
+  particles.forEach((p) => {
+    p.update();
+
+    p.draw();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+/* ==========================
+      SCROLL REVEAL
+========================== */
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 80);
+
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  },
+);
+
+reveals.forEach((item) => {
+  observer.observe(item);
+});
+
+/* ==========================
+        MOBILE MENU
+========================== */
+
+const navToggle = document.getElementById("navToggle");
+
+const navLinks = document.getElementById("navLinks");
+
+function closeMenu() {
+  navLinks.classList.remove("open");
+
+  navToggle.classList.remove("active");
+
+  navToggle.setAttribute("aria-expanded", "false");
+}
+
+navToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+
+  navToggle.classList.toggle("active", isOpen);
+
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("click", (e) => {
+  if (navLinks.classList.contains("open") && !e.target.closest("nav")) {
+    closeMenu();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && navLinks.classList.contains("open")) {
+    closeMenu();
+
+    navToggle.focus();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900 && navLinks.classList.contains("open")) {
+    closeMenu();
+  }
+});

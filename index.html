@@ -4,29 +4,19 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <title>Siddharth Kumar | Frontend Developer</title>
 
-    <meta name="description"
-        content="Siddharth Kumar - Frontend Developer and MCA Graduate skilled in HTML5, CSS3, JavaScript, React.js, Bootstrap, Tailwind CSS, Material UI, and responsive web development.">
 
-    <meta name="keywords"
-        content="Frontend Developer, React Developer, Web Developer, JavaScript Developer, HTML CSS Developer, React.js, Bootstrap, Tailwind CSS, Material UI">
-
-    <meta name="author" content="Siddharth Kumar">
-
-    <meta name="robots" content="index, follow">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 
 
     <link rel="stylesheet" href="style.css">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 
 </head>
@@ -34,474 +24,1380 @@
 
 <body>
 
-    <header>
-        <nav>
-            <h2 class="logo">
-                Siddharth <span>Kumar.</span>
-            </h2>
-            <ul id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+
+    <canvas id="bg-canvas"></canvas>
 
 
 
 
+    <!-- NAVBAR -->
 
-    <!-- ================= HERO ================= -->
-
-
-    <section class="hero" id="home">
+    <nav>
 
 
-        <div class="hero-content">
-
-
-            <span class="tag">
-
-                👋 Hello, I'm
-
-            </span>
-
-
-
-            <h1>
-
-                Siddharth Kumar
-
-            </h1>
-
-
-
-            <h2 class="typing-text"></h2>
-
-
-
-
-            <p>
-
-                I build modern, responsive, and interactive web applications using
-                HTML, CSS, JavaScript, React.js, Bootstrap, Tailwind CSS,
-                and Material UI. I specialize in creating clean, scalable,
-                and user-friendly web experiences with a focus on performance
-                and great UI design.
-
-            </p>
-
-
-
-            <div class="buttons">
-
-
-                <a href="#contact" class="btn">
-
-                    Hire Me
-
-                </a>
-
-
-
-                <a href="resume/Siddharth_Kumar_Resume.pdf.pdf" class="btn outline" download>
-
-                    Download Resume
-
-                </a>
-
-
-            </div>
-
-
-
-
-            <div class="social">
-
-
-                <a href="https://github.com/Siddharthkumr" target="_blank">
-
-                    <i class="fa-brands fa-github"></i>
-
-                </a>
-
-
-
-                <a href="https://www.linkedin.com/in/siddharth-kumar-149511316/" target="_blank">
-
-                    <i class="fa-brands fa-linkedin"></i>
-
-                </a>
-
-
-            </div>
-
-
-
+        <div class="nav-logo">
+            Siddharth Kumar
         </div>
 
 
 
+        <ul class="nav-links" id="navLinks">
 
 
-        <div class="profile">
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#experience">Experience</a></li>
+
+            <li><a href="#education">Education</a></li>
+
+            <li><a href="#contact">Contact</a></li>
 
 
-            <div class="circle">
+        </ul>
 
 
-                <img src="images/my_image-removebg-preview.png" alt="Siddharth Kumar">
+
+
+
+
+    </nav>
+
+
+
+
+
+
+
+    <main>
+
+
+
+
+
+        <!-- HERO SECTION -->
+
+
+        <section class="hero">
+
+
+            <div class="hero-inner">
+
+
+
+
+
+                <div class="hero-content">
+
+
+
+
+
+                    <div class="hero-badge">
+
+                        Open to Frontend Developer Opportunities
+
+                    </div>
+
+
+
+
+
+
+                    <h1>
+
+
+                        <span style="color:var(--text)">
+                            Hi, I'm
+                        </span>
+
+
+
+                        <span class="name">
+
+                            Siddharth Kumar
+
+                        </span>
+
+
+                    </h1>
+
+
+
+
+
+
+                    <div class="hero-role">
+
+                        Frontend Developer | React.js Developer
+
+                    </div>
+
+
+
+
+
+
+                    <p class="hero-desc">
+
+
+                        MCA Graduate from
+
+                        <strong style="color:var(--text)">
+                            NIET Greater Noida
+                        </strong>
+
+
+                        with skills in HTML, CSS, JavaScript, React.js and modern frontend technologies.
+
+                        I build responsive and user-friendly web applications.
+
+
+
+                    </p>
+
+
+
+
+
+
+
+
+                    <div class="hero-ctas">
+
+
+                        <a href="#projects" class="btn-primary">
+
+                            View My Projects
+
+                        </a>
+
+
+
+
+                        <a href="#contact" class="btn-outline">
+
+                            Hire Me
+
+                        </a>
+
+
+
+
+
+                        <a href="resume/Siddharth_Kumar_Resume.pdf.pdf" target="_blank" class="btn-outline">
+
+                            Download Resume
+
+                        </a>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="hero-cards">
+
+
+
+                        <div class="hero-stat-card">
+
+
+                            <div class="num">
+                                1+
+                            </div>
+
+
+                            <div class="lbl">
+                                Experience
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <div class="hero-stat-card">
+
+
+                            <div class="num">
+                                10+
+                            </div>
+
+
+                            <div class="lbl">
+                                Projects
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <div class="hero-stat-card">
+
+
+                            <div class="num">
+                                15+
+                            </div>
+
+
+                            <div class="lbl">
+                                Skills
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <div class="hero-stat-card">
+
+
+                            <div class="num">
+                                MCA
+                            </div>
+
+
+                            <div class="lbl">
+                                Graduate
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <!-- PROFILE IMAGE -->
+
+
+                <div class="profile-photo-wrap">
+
+
+                    <div class="profile-glow"></div>
+
+
+
+                    <a href="#" class="profile-photo-link">
+
+
+                        <img src="images/my_image-removebg-preview.png" alt="Siddharth Kumar" class="profile-photo">
+
+
+                    </a>
+
+
+
+                </div>
+
+
+
+
 
 
             </div>
 
 
-        </div>
 
-
-
-    </section>
-
-
-
-
-
-    <!-- ================= ABOUT ================= -->
-
-
-    <section class="section reveal" id="about">
-
-
-        <h2 class="title">
-
-            About Me
-
-        </h2>
-
-
-
-        <div class="about">
-
-
-            <p>
-
-                I am Siddharth Kumar, an MCA graduate and Frontend Developer
-                with a strong foundation in HTML, CSS, JavaScript, React.js,
-                Bootstrap, Tailwind CSS, and Material UI.
-
-            </p>
-
-
-
-            <p>
-
-                During my Frontend Developer Internship, I worked on real-world
-                projects, improved website responsiveness, and developed clean,
-                user-friendly web interfaces.
-
-            </p>
-
-
-
-            <p>
-
-                I enjoy building scalable, responsive, and interactive digital
-                experiences that provide a better user experience.
-
-            </p>
-
-
-        </div>
+        </section>
 
 
 
 
 
-        <div class="info-card">
 
 
-            <div class="education-card">
+
+        <!-- ABOUT SECTION -->
 
 
-                <h3>
+        <section id="about">
 
+
+
+            <div class="reveal">
+
+
+
+                <div class="section-eyebrow">
+
+                    About
+
+                </div>
+
+
+
+
+                <h2 class="section-title">
+
+                    Who I <span>am</span>
+
+                </h2>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="about-grid">
+
+
+
+
+
+                <div class="about-text reveal">
+
+
+
+
+
+
+                    <p>
+
+
+                        I'm a
+
+                        <strong>
+                            Frontend Developer and MCA Graduate
+                        </strong>
+
+
+                        from NIET Greater Noida, passionate about creating modern websites and responsive web
+                        applications.
+
+
+
+                    </p>
+
+
+
+
+
+
+
+                    <p>
+
+
+                        I have hands-on experience with
+
+                        <strong>
+                            HTML5, CSS3, JavaScript, React.js, Bootstrap, Tailwind CSS, Node.js and MongoDB.
+                        </strong>
+
+
+
+                    </p>
+
+
+
+
+
+
+
+                    <p>
+
+
+                        I completed my Frontend Developer Internship at
+
+                        <strong>
+                            Supple Soft Pvt. Ltd., Gurgaon
+                        </strong>
+
+
+                        (Feb 2025 - May 2025).
+
+
+
+                    </p>
+
+
+
+
+
+
+
+
+                    <div class="about-info">
+
+
+
+                        <div class="about-info-item">
+
+                            <span>
+                                📍
+                            </span>
+
+                            Greater Noida, Uttar Pradesh
+
+                        </div>
+
+
+
+
+
+                        <div class="about-info-item">
+
+                            <span>
+                                📧
+                            </span>
+
+                            siddharthkumar1082@gmail.com
+
+                        </div>
+
+
+
+
+
+
+                        <div class="about-info-item">
+
+                            <span>
+                                💻
+                            </span>
+
+                            Frontend Developer
+
+                        </div>
+
+
+
+
+
+
+                        <div class="about-info-item">
+
+                            <span>
+                                🗣️
+                            </span>
+
+                            Hindi · English
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="about-stats-grid reveal">
+
+
+
+
+
+                    <div class="stat-box">
+
+
+                        <div class="stat-num">
+                            2026
+                        </div>
+
+
+                        <div class="stat-label">
+                            MCA Completed
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="stat-box">
+
+
+                        <div class="stat-num">
+                            1
+                        </div>
+
+
+                        <div class="stat-label">
+                            Internship
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="stat-box">
+
+
+                        <div class="stat-num">
+                            10+
+                        </div>
+
+
+                        <div class="stat-label">
+                            Projects
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="stat-box">
+
+
+                        <div class="stat-num">
+                            3+
+                        </div>
+
+
+                        <div class="stat-label">
+                            Certificates
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+        </section>
+        <section id="about">
+
+            <div class="reveal">
+
+                <div class="section-eyebrow">
+                    About
+                </div>
+
+                <h2 class="section-title">
+                    Who I <span>am</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-text reveal">
+
+                    <p>
+                        I'm a <strong>MCA Graduate from NIET Greater Noida</strong> and
+                        Frontend Developer passionate about creating responsive and modern web applications.
+                    </p>
+
+
+                    <p>
+                        I have hands-on experience with
+                        <strong>
+                            HTML, CSS, JavaScript, React JS, Bootstrap, Tailwind CSS, Node.js and MongoDB.
+                        </strong>
+                    </p>
+
+
+                    <p>
+                        I completed my Frontend Developer Internship at
+                        <strong>Supple Soft Pvt. Ltd., Gurgaon</strong>
+                        where I worked on responsive UI development and frontend projects.
+                    </p>
+
+
+
+                    <div class="about-info">
+
+
+                        <div class="about-info-item">
+                            <span>📍</span>
+                            Greater Noida, Uttar Pradesh
+                        </div>
+
+
+
+                        <div class="about-info-item">
+                            <span>📧</span>
+                            siddharthkumar1082@gmail.com
+                        </div>
+
+
+
+                        <div class="about-info-item">
+                            <span>📞</span>
+                            +91 7766052347
+                        </div>
+
+
+
+                        <div class="about-info-item">
+                            <span>🗣️</span>
+                            Hindi · English
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="about-stats-grid reveal">
+
+
+                    <div class="stat-box">
+
+                        <div class="stat-num">
+                            64.6%
+                        </div>
+
+                        <div class="stat-label">
+                            MCA
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-box">
+
+                        <div class="stat-num">
+                            68.5%
+                        </div>
+
+                        <div class="stat-label">
+                            BCA
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-box">
+
+                        <div class="stat-num">
+                            1+
+                        </div>
+
+                        <div class="stat-label">
+                            Experience
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-box">
+
+                        <div class="stat-num">
+                            10+
+                        </div>
+
+                        <div class="stat-label">
+                            Projects
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <section id="skills" class="skills-section">
+
+
+            <div class="reveal">
+
+
+                <div class="section-eyebrow">
+                    Skills
+                </div>
+
+
+                <h2 class="section-title">
+                    What I <span>know</span>
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="skills-two-col reveal">
+
+
+                <div>
+
+
+                    <div class="skills-group-title">
+                        Technical Skills
+                    </div>
+
+
+
+                    <div class="skills-grid">
+
+
+                        <span class="skill-pill">
+                            HTML5
+                        </span>
+
+
+                        <span class="skill-pill">
+                            CSS3
+                        </span>
+
+
+                        <span class="skill-pill">
+                            JavaScript
+                        </span>
+
+
+                        <span class="skill-pill">
+                            React JS
+                        </span>
+
+
+                        <span class="skill-pill">
+                            Bootstrap
+                        </span>
+
+
+                        <span class="skill-pill">
+                            Tailwind CSS
+                        </span>
+
+
+                        <span class="skill-pill">
+                            Material UI
+                        </span>
+
+
+                        <span class="skill-pill">
+                            Node JS
+                        </span>
+
+
+                        <span class="skill-pill">
+                            MongoDB
+                        </span>
+
+
+                        <span class="skill-pill">
+                            Git & GitHub
+                        </span>
+
+
+                        <span class="skill-pill">
+                            Figma
+                        </span>
+
+
+                        <span class="skill-pill">
+                            Postman
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="skills-group-title" style="margin-top:2rem">
+
+                        Tools
+
+                    </div>
+
+
+                    <div class="skills-grid">
+
+
+                        <span class="lang-pill">
+                            VS Code
+                        </span>
+
+
+                        <span class="lang-pill">
+                            Netlify
+                        </span>
+
+
+                        <span class="lang-pill">
+                            Vercel
+                        </span>
+
+
+                        <span class="lang-pill">
+                            Render
+                        </span>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div>
+
+
+                    <div class="skills-group-title">
+                        Soft Skills
+                    </div>
+
+
+                    <div class="skills-grid">
+
+
+                        <span class="soft-pill">
+                            Problem Solving
+                        </span>
+
+
+                        <span class="soft-pill">
+                            Communication
+                        </span>
+
+
+                        <span class="soft-pill">
+                            Team Work
+                        </span>
+
+
+                        <span class="soft-pill">
+                            Quick Learning
+                        </span>
+
+
+                        <span class="soft-pill">
+                            Time Management
+                        </span>
+
+
+                        <span class="soft-pill">
+                            Adaptability
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section id="projects">
+
+
+            <div class="reveal">
+
+                <div class="section-eyebrow">
+                    Projects
+                </div>
+
+
+                <h2 class="section-title">
+                    Things I've <span>built</span>
+                </h2>
+
+
+            </div>
+
+
+
+
+            <div class="projects-grid">
+
+
+
+                <div class="project-card reveal">
+
+
+                    <div class="project-top">
+
+                        <span class="project-badge">
+                            React Project
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-title">
+                        Movie Ticket Booking App
+                    </div>
+
+
+                    <p class="project-desc">
+
+                        A full-stack movie ticket booking application with modern UI,
+                        API integration, user interface and database management.
+
+                    </p>
+
+
+
+                    <div class="project-stack">
+
+                        <span class="tag">
+                            React JS
+                        </span>
+
+                        <span class="tag">
+                            Node JS
+                        </span>
+
+                        <span class="tag">
+                            MongoDB
+                        </span>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+                <div class="project-card reveal">
+
+
+                    <div class="project-top">
+
+                        <span class="project-badge">
+                            Frontend
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-title">
+                        Simple Calculator
+                    </div>
+
+
+                    <div class="project-desc">
+                        Developed a responsive calculator application with basic arithmetic operations and a clean user
+                        interface using HTML, CSS, and JavaScript.
+                    </div>
+
+
+
+                    <div class="project-stack">
+                        <span class="tag">
+                            HTML
+                        </span>
+
+                        <span class="tag">
+                            CSS3
+                        </span>
+
+
+
+                        <span class="tag">
+                            JavaScript
+                        </span>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+                <div class="project-card reveal">
+
+
+                    <div class="project-top">
+
+                        <span class="project-badge">
+                            UI Project
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-title">
+                        YouTube Clone
+                    </div>
+
+
+
+                    <p class="project-desc">
+
+                        Built a YouTube-inspired video streaming UI using HTML, CSS, and JavaScript.
+                        - Implemented responsive layout, video cards, sidebar navigation, and modern UI design.
+
+                    </p>
+
+
+
+                    <div class="project-stack">
+
+                        <span class="tag">
+                            HTML
+                        </span>
+
+                        <span class="tag">
+                            CSS
+                        </span>
+
+                        <span class="tag">
+                            JavaScript
+                        </span>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <section id="experience">
+
+
+            <div class="reveal">
+
+
+                <div class="section-eyebrow">
+                    Experience
+                </div>
+
+
+
+                <h2 class="section-title">
+                    My <span>Journey</span>
+                </h2>
+
+
+            </div>
+
+
+
+
+            <div class="edu-timeline">
+
+
+
+                <div class="edu-item reveal">
+
+
+                    <div class="edu-year">
+                        Feb 2025 - May 2025
+                    </div>
+
+
+
+                    <div class="edu-degree">
+                        Frontend Developer Intern
+                    </div>
+
+
+
+                    <div class="edu-school">
+                        Supple Soft Pvt. Ltd., Gurgaon
+                    </div>
+
+
+
+                    <div class="edu-note">
+
+                        Worked on responsive web interfaces,
+                        UI development and frontend technologies.
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+        <section id="education">
+
+
+            <div class="reveal">
+
+
+                <div class="section-eyebrow">
                     Education
-
-                </h3>
-
-
-
-                <p>
-
-                    <strong>Master of Computer Applications (MCA)</strong><br>
-
-                    NIET Greater Noida | 2026
-
-                </p>
+                </div>
 
 
 
-                <p>
-
-                    <strong>Bachelor of Computer Applications (BCA)</strong><br>
-
-                    KIIT Gurgaon | 2023
-
-                </p>
-
-
-
-                <p>
-
-                    <strong>Intermediate (12th)</strong><br>
-
-                    Laxmi Narayan Dubey College | 2019
-
-                </p>
-
-
-
-                <p>
-
-                    <strong>Secondary School (10th)</strong><br>
-
-                    CBSE Board | 2016
-
-                </p>
+                <h2 class="section-title">
+                    My <span>Background</span>
+                </h2>
 
 
 
             </div>
 
 
-        </div>
 
 
-    </section>
-    <!-- ================= SKILLS ================= -->
 
-    <section class="section reveal" id="skills">
-
-        <h2 class="title">
-            Skills
-        </h2>
+            <div class="edu-timeline">
 
 
-        <div class="cards">
+
+                <div class="edu-item reveal">
 
 
-            <div class="card">
+                    <div class="edu-year">
+                        2026
+                    </div>
 
-                <i class="fa-brands fa-html5"></i>
 
-                <h3>
-                    HTML5
-                </h3>
+                    <div class="edu-degree">
+                        Master of Computer Applications (MCA)
+                    </div>
+
+
+                    <div class="edu-school">
+                        NIET Greater Noida
+                    </div>
+
+
+                    <div class="edu-note">
+                        Percentage: 64.6%
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="edu-item reveal">
+
+
+                    <div class="edu-year">
+                        2023
+                    </div>
+
+
+                    <div class="edu-degree">
+                        Bachelor of Computer Applications (BCA)
+                    </div>
+
+
+                    <div class="edu-school">
+                        Kamrah Institute of Information & Technology
+                    </div>
+
+
+                    <div class="edu-note">
+                        Percentage: 68.5%
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="edu-item reveal">
+
+
+                    <div class="edu-year">
+                        2019
+                    </div>
+
+
+                    <div class="edu-degree">
+                        Intermediate (12th)
+                    </div>
+
+
+                    <div class="edu-school">
+                        Bihar School Examination Board
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="edu-item reveal">
+
+
+                    <div class="edu-year">
+                        2017
+                    </div>
+
+
+                    <div class="edu-degree">
+                        Secondary School (10th)
+                    </div>
+
+
+                    <div class="edu-school">
+                        CBSE Board
+                    </div>
+
+
+                </div>
+
+
 
             </div>
 
 
+        </section>
 
-            <div class="card">
 
-                <i class="fa-brands fa-css3-alt"></i>
 
-                <h3>
-                    CSS3
-                </h3>
 
-            </div>
 
 
 
-            <div class="card">
 
-                <i class="fa-solid fa-wind"></i>
+        <section id="contact" class="contact-section">
 
-                <h3>
-                    Tailwind CSS
-                </h3>
 
-            </div>
+            <div class="reveal">
 
 
+                <div class="section-eyebrow">
+                    Contact
+                </div>
 
-            <div class="card">
 
-                <i class="fa-brands fa-js"></i>
-
-                <h3>
-                    JavaScript
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-brands fa-bootstrap"></i>
-
-                <h3>
-                    Bootstrap
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-brands fa-react"></i>
-
-                <h3>
-                    React JS
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-solid fa-code"></i>
-
-                <h3>
-                    React Router
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-solid fa-database"></i>
-
-                <h3>
-                    REST API
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-solid fa-terminal"></i>
-
-                <h3>
-                    Vite
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-solid fa-layer-group"></i>
-
-                <h3>
-                    Material UI
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-brands fa-git-alt"></i>
-
-                <h3>
-                    Git
-                </h3>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <i class="fa-brands fa-github"></i>
-
-                <h3>
-                    GitHub
-                </h3>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-    <!-- ================= PROJECTS ================= -->
-
-
-    <section class="section reveal" id="projects">
-
-
-        <h2 class="title">
-            Projects
-        </h2>
-
-
-
-        <div class="cards">
-
-
-
-            <div class="project">
-
-
-                <img src="images/youtube  img.jpg" alt="YouTube Clone">
-
-
-
-                <h3>
-                    🚀 YouTube Clone
-                </h3>
-
-
-
-                <p>
-
-                    A responsive YouTube UI clone built using HTML5,
-                    CSS3, and JavaScript. Implemented modern layouts,
-                    responsive design, and interactive UI components.
-
-                </p>
-
-
-
-                <a href="https://github.com/Siddharthkumr" target="_blank">
-
-                    GitHub
-
-                </a>
-
-
-
-                <a href="#" target="_blank">
-
-                    Go To Project
-
-                </a>
-
+                <h2 class="section-title">
+                    Let's work <span>together</span>
+                </h2>
 
 
             </div>
@@ -510,43 +1406,227 @@
 
 
 
-
-            <div class="project">
-
-
-                <img src="images/movie ui .jpg" alt="Movie UI">
+            <div class="contact-grid">
 
 
 
-                <h3>
-                    🎬 Movie Application UI
-                </h3>
+                <div class="reveal">
+
+
+                    <p class="contact-desc">
+
+                        I'm available for
+                        <span class="contact-highlight">
+                            Frontend Developer jobs, internships and freelance projects.
+                        </span>
+
+                        Let's connect and build something amazing.
+
+                    </p>
 
 
 
-                <p>
-
-                    A responsive Movie Application UI built with modern
-                    frontend technologies. Designed reusable movie cards,
-                    clean layouts, and user-friendly interface.
-
-                </p>
 
 
-
-                <a href="https://github.com/Siddharthkumr" target="_blank">
-
-                    GitHub
-
-                </a>
+                    <div class="avail-card">
 
 
+                        <div class="avail-inner">
 
-                <a href="#" target="_blank">
 
-                    Go To Project
+                            <div class="big">
+                                Open
+                            </div>
 
-                </a>
+
+                            <p>
+                                Available for frontend development opportunities.
+                            </p>
+
+
+
+                            <div class="avail-badge">
+                                Available Now
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="contact-links reveal">
+
+
+
+                    <a href="mailto:siddharthkumar1082@gmail.com" class="contact-item">
+
+
+                        <div class="contact-item-left">
+
+                            <div class="contact-icon">
+                                ✉️
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+                                    Email
+                                </div>
+
+
+                                <div class="contact-val">
+                                    siddharthkumar1082@gmail.com
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span class="contact-arr">
+                            ↗
+                        </span>
+
+
+                    </a>
+
+
+
+
+
+                    <a href="tel:+917766052347" class="contact-item">
+
+
+                        <div class="contact-item-left">
+
+                            <div class="contact-icon">
+                                📞
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+                                    Phone
+                                </div>
+
+
+                                <div class="contact-val">
+                                    +91 7766052347
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="contact-arr">
+                            ↗
+                        </span>
+
+
+                    </a>
+
+
+
+
+
+
+                    <a href="https://github.com/Siddharthkumr" target="_blank" class="contact-item">
+
+
+                        <div class="contact-item-left">
+
+
+                            <div class="contact-icon">
+                                💻
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+                                    GitHub
+                                </div>
+
+
+                                <div class="contact-val">
+                                    Siddharth Kumar
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span class="contact-arr">
+                            ↗
+                        </span>
+
+
+                    </a>
+
+
+
+
+
+
+                    <a href="https://www.linkedin.com/in/siddharth-kumar-149511316/" target="_blank"
+                        class="contact-item">
+
+
+                        <div class="contact-item-left">
+
+
+                            <div class="contact-icon">
+                                💼
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+                                    LinkedIn
+                                </div>
+
+
+                                <div class="contact-val">
+                                    Siddharth Kumar
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span class="contact-arr">
+                            ↗
+                        </span>
+
+
+                    </a>
+
+
+
+                </div>
 
 
 
@@ -554,438 +1634,40 @@
 
 
 
+        </section>
 
 
 
-            <div class="project">
 
 
-                <img src="images/calcluter.jpg" alt="Calculator">
 
+    </main>
 
 
-                <h3>
-                    🧮 Calculator App
-                </h3>
 
 
-
-                <p>
-
-                    A JavaScript-based Calculator Application built using
-                    HTML5, CSS3, and JavaScript. Implemented DOM manipulation,
-                    event handling, and responsive design.
-
-                </p>
-
-
-
-                <a href="https://github.com/Siddharthkumr" target="_blank">
-
-                    GitHub
-
-                </a>
-
-
-
-                <a href="#" target="_blank">
-
-                    Go To Project
-
-                </a>
-
-
-
-            </div>
-
-
-
-        </div>
-
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- ================= EXPERIENCE ================= -->
-
-
-    <section class="section reveal" id="experience">
-
-
-        <h2 class="title">
-
-            Experience
-
-        </h2>
-
-
-
-        <div class="experience-box">
-
-
-            <h3>
-
-                Frontend Developer Intern
-
-            </h3>
-
-
-
-            <h4>
-
-                Supple Soft Pvt. Ltd. Gurgaon
-
-            </h4>
-
-
-
-            <p>
-
-                <strong>
-                    Duration:
-                </strong>
-
-                February 2025 – May 2025
-
-            </p>
-
-
-
-
-            <p>
-
-                Worked as a Frontend Developer Intern and developed
-                responsive web applications using HTML5, CSS3,
-                JavaScript, and React.js.
-
-                Created reusable UI components, improved website
-                responsiveness, optimized user interfaces, and
-                collaborated with the team to deliver clean,
-                scalable, and user-friendly web solutions.
-
-            </p>
-
-
-
-        </div>
-
-
-
-    </section>
-
-
-    <!-- ================= DOCUMENTS ================= -->
-
-    <section class="section reveal" id="documents">
-
-        <h2 class="title">
-            Certificates & Documents
-        </h2>
-
-
-        <div class="documents">
-
-
-            <h3>
-                Frontend Developer Internship
-            </h3>
-
-
-            <p>
-                Supple Soft Pvt. Ltd., Gurgaon
-            </p>
-
-
-
-            <a href="doc/my Internship certificate supple soft.pdf" target="_blank">
-
-                View Certificate
-
-            </a>
-
-
-
-            <a href="doc/Supple soft internship offer letter.pdf" target="_blank">
-
-                View Offer Letter
-
-            </a>
-
-
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-    <!-- ================= CONTACT ================= -->
-
-
-    <section class="section reveal" id="contact">
-
-
-        <h2 class="title">
-
-            Contact Me
-
-        </h2>
-
-
-
-        <div class="contact">
-
-
-            <p>
-
-                <i class="fa-solid fa-envelope"></i>
-
-                <strong>Email:</strong>
-
-                siddharthkumar1082@gmail.com
-
-            </p>
-
-
-
-
-            <p>
-
-                <i class="fa-solid fa-phone"></i>
-
-                <strong>Phone:</strong>
-
-                +91 7766052347
-
-            </p>
-
-
-
-
-            <p>
-
-                <i class="fa-brands fa-github"></i>
-
-                <strong>GitHub:</strong>
-
-
-                <a href="https://github.com/Siddharthkumr" target="_blank">
-
-                    github.com/Siddharthkumr
-
-                </a>
-
-
-            </p>
-
-
-
-
-            <p>
-
-                <i class="fa-brands fa-linkedin"></i>
-
-                <strong>LinkedIn:</strong>
-
-
-                <a href="https://www.linkedin.com/in/siddharth-kumar-149511316/" target="_blank">
-
-                    linkedin.com/in/siddharth-kumar-149511316
-
-                </a>
-
-
-            </p>
-
-
-
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- ================= FOOTER ================= -->
 
 
     <footer>
 
 
-        <div class="footer-coded-by">
-
-
-            <p>
-
-                <i class="fas fa-code"></i>
-                with 💙 by Siddharth Kumar &copy; 2026
-
-            </p>
+        <span>
+            Siddharth Kumar © 2026
+        </span>
 
 
 
-            <p>
+        <span>
+            Frontend Developer · MCA Graduate
+        </span>
 
-                Built with pure HTML, CSS and JavaScript
-
-            </p>
-
-
-
-        </div>
-
-
-
-
-
-        <div class="footer-social">
-
-
-            <a href="https://www.instagram.com/siddharthkumaragrahari/" target="_blank">
-
-                <i class="fab fa-instagram"></i>
-
-            </a>
-
-
-
-            <a href="https://github.com/Siddharthagrahari978" target="_blank">
-
-                <i class="fab fa-github"></i>
-
-            </a>
-
-
-
-
-            <a href="https://twitter.com/SIDDHAR36033105" target="_blank">
-
-                <i class="fab fa-twitter"></i>
-
-            </a>
-
-
-        </div>
 
 
     </footer>
 
 
 
-
-
-
-
-    <!-- ================= AI CHAT ================= -->
-
-
-    <div class="ai-button" onclick="openAI()">
-
-
-        <i class="fa-solid fa-comments"></i>
-
-
-    </div>
-
-
-
-
-
-    <div class="ai-box" id="aiBox">
-
-
-        <div class="ai-header">
-
-
-            <h3>
-
-                Siddharth AI
-
-            </h3>
-
-
-
-            <span onclick="openAI()" style="cursor:pointer;">
-
-
-                <i class="fa-solid fa-xmark"></i>
-
-
-            </span>
-
-
-
-        </div>
-
-
-
-
-
-
-        <div class="ai-chat" id="chat">
-
-
-            <p>
-
-                👋 Hello! I am Siddharth AI.
-                Ask me about my skills,
-                projects, experience or education.
-
-            </p>
-
-
-        </div>
-
-
-
-
-
-
-
-        <div class="ai-input">
-
-
-            <input type="text" id="userInput" placeholder="Ask something...">
-
-
-
-            <button onclick="sendAI()">
-
-                Send
-
-            </button>
-
-
-        </div>
-
-
-
-    </div>
-
-
-
-
-
-
-
-    <!-- ================= JAVASCRIPT ================= -->
-
-
     <script src="script.js"></script>
-
 
 
 </body>
